@@ -1,0 +1,1574 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "v3",
+        "title": "Public Transport Victoria Timetable",
+        "description": "The PTV Timetable API provides direct access to Public Transport Victoria???s public transport timetable data. The API returns scheduled timetable, route and stop data for all metropolitan and regional train, tram and bus services in Victoria, including Night Network(Night Train and Night Tram data are included in metropolitan train and tram services data, respectively, whereas Night Bus is a separate route type). The API also returns real-time data for metropolitan train, tram and bus services (where this data is made available to PTV), as well as disruption information, stop facility information, and access to myki ticket outlet data.",
+        "termsOfService": "http:\/\/ptv.vic.gov.au\/ptv-timetable-api\/"
+    },
+    "servers": [
+        "httpstimetableapi.ptv.vic.gov.au\/"
+    ],
+    "paths": {
+        "\/v3\/departures\/route_type\/{route_type}\/stop\/{stop_id}": {
+            "get": {
+                "summary": "Get V3 Departures Route Type Route Type Stop Stop",
+                "description": "View departures for all routes from a stop.",
+                "operationId": "DeparturesGetForStop",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "route_type",
+                        "in": "path",
+                        "description": "Number identifying transport mode; values returned via RouteTypes API"
+                    },
+                    {
+                        "name": "stop_id",
+                        "in": "path",
+                        "description": "Identifier of stop; values returned by Stops API"
+                    },
+                    {
+                        "name": "platform_numbers",
+                        "in": "query",
+                        "description": "Filter by platform number at stop"
+                    },
+                    {
+                        "name": "direction_id",
+                        "in": "query",
+                        "description": "Filter by identifier of direction of travel; values returned by Directions API - \/v3\/directions\/route\/{route_id}"
+                    },
+                    {
+                        "name": "date_utc",
+                        "in": "query",
+                        "description": "Filter by the date and time of the request (ISO 8601 UTC format)"
+                    },
+                    {
+                        "name": "max_results",
+                        "in": "query",
+                        "description": "Maximum number of results returned"
+                    },
+                    {
+                        "name": "gtfs",
+                        "in": "query",
+                        "description": "Indicates that stop_id parameter will accept \"GTFS stop_id\" data"
+                    },
+                    {
+                        "name": "include_cancelled",
+                        "in": "query",
+                        "description": "Indicates if cancelled services (if they exist) are returned (default = false) - metropolitan train only"
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "description": "List objects to be returned in full (i.e. expanded) - options include: all, stop, route, run, direction, disruption"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/departures\/route_type\/{route_type}\/stop\/{stop_id}\/route\/{route_id}": {
+            "get": {
+                "summary": "Get V3 Departures Route Type Route Type Stop Stop Route Route",
+                "description": "View departures for a specific route from a stop.",
+                "operationId": "DeparturesGetForStopAndRoute",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "route_type",
+                        "in": "path",
+                        "description": "Number identifying transport mode; values returned via RouteTypes API"
+                    },
+                    {
+                        "name": "stop_id",
+                        "in": "path",
+                        "description": "Identifier of stop; values returned by Stops API"
+                    },
+                    {
+                        "name": "route_id",
+                        "in": "path",
+                        "description": "Identifier of route; values returned by Routes API - v3\/routes"
+                    },
+                    {
+                        "name": "direction_id",
+                        "in": "query",
+                        "description": "Filter by identifier of direction of travel; values returned by Directions API - \/v3\/directions\/route\/{route_id}"
+                    },
+                    {
+                        "name": "date_utc",
+                        "in": "query",
+                        "description": "Filter by the date and time of the request (ISO 8601 UTC format)"
+                    },
+                    {
+                        "name": "max_results",
+                        "in": "query",
+                        "description": "Maximum number of results returned"
+                    },
+                    {
+                        "name": "gtfs",
+                        "in": "query",
+                        "description": "Indicates that stop_id parameter will accept \"GTFS stop_id\" data"
+                    },
+                    {
+                        "name": "include_cancelled",
+                        "in": "query",
+                        "description": "Indicates if cancelled services (if they exist) are returned (default = false) - metropolitan train only"
+                    },
+                    {
+                        "name": "expand",
+                        "in": "query",
+                        "description": "List objects to be returned in full (i.e. expanded) - options include: all, stop, route, run, direction, disruption"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/directions\/route\/{route_id}": {
+            "get": {
+                "summary": "Get V3 Directions Route Route",
+                "description": "View directions that a route travels in.",
+                "operationId": "DirectionsForRoute",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "route_id",
+                        "in": "path",
+                        "description": "Identifier of route; values returned by Routes API - v3\/routes"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/directions\/{direction_id}": {
+            "get": {
+                "summary": "Get V3 Directions Direction",
+                "description": "View all routes for a direction of travel.",
+                "operationId": "DirectionsForDirection",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "direction_id",
+                        "in": "path",
+                        "description": "Identifier of direction of travel; values returned by Directions API - \/v3\/directions\/route\/{route_id}"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/directions\/{direction_id}\/route_type\/{route_type}": {
+            "get": {
+                "summary": "Get V3 Directions Direction Route Type Route Type",
+                "description": "View all routes of a particular type for a direction of travel.",
+                "operationId": "DirectionsForDirectionAndType",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "direction_id",
+                        "in": "path",
+                        "description": "Identifier of direction of travel; values returned by Directions API - \/v3\/directions\/route\/{route_id}"
+                    },
+                    {
+                        "name": "route_type",
+                        "in": "path",
+                        "description": "Number identifying transport mode; values returned via RouteTypes API"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/disruptions": {
+            "get": {
+                "summary": "Get V3 Disruptions",
+                "description": "View all disruptions for all route types.",
+                "operationId": "DisruptionsGetAllDisruptions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "route_types",
+                        "in": "query",
+                        "description": "Filter by route_type; values returned via RouteTypes API"
+                    },
+                    {
+                        "name": "disruption_status",
+                        "in": "query",
+                        "description": "Filter by status of disruption"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/disruptions\/route\/{route_id}": {
+            "get": {
+                "summary": "Get V3 Disruptions Route Route",
+                "description": "View all disruptions for a particular route.",
+                "operationId": "DisruptionsGetDisruptionsByRoute",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "route_id",
+                        "in": "path",
+                        "description": "Identifier of route; values returned by Routes API - v3\/routes"
+                    },
+                    {
+                        "name": "disruption_status",
+                        "in": "query",
+                        "description": "Filter by status of disruption"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/disruptions\/{disruption_id}": {
+            "get": {
+                "summary": "Get V3 Disruptions Disruption",
+                "description": "View a specific disruption.",
+                "operationId": "DisruptionsGetDisruptionById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "disruption_id",
+                        "in": "path",
+                        "description": "Identifier of disruption; values returned by Disruptions API - \/v3\/disruptions OR \/v3\/disruptions\/route\/{route_id}"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/pattern\/run\/{run_id}\/route_type\/{route_type}": {
+            "get": {
+                "summary": "Get V3 Pattern Run Run Route Type Route Type",
+                "description": "View the stopping pattern for a specific trip\/service run.",
+                "operationId": "PatternsGetPatternByRun",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "run_id",
+                        "in": "path",
+                        "description": "Identifier of a trip\/service run; values returned by Runs API - \/v3\/route\/{route_id} and Departures API"
+                    },
+                    {
+                        "name": "route_type",
+                        "in": "path",
+                        "description": "Number identifying transport mode; values returned via RouteTypes API"
+                    },
+                    {
+                        "name": "stop_id",
+                        "in": "query",
+                        "description": "Filter by stop_id; values returned by Stops API"
+                    },
+                    {
+                        "name": "date_utc",
+                        "in": "query",
+                        "description": "Filter by the date and time of the request (ISO 8601 UTC format)"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/route_types": {
+            "get": {
+                "summary": "Get V3 Route Types",
+                "description": "View all route types and their names.",
+                "operationId": "RouteTypesGetRouteTypes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/routes": {
+            "get": {
+                "summary": "Get V3 Routes",
+                "description": "View route names and numbers for all routes.",
+                "operationId": "RoutesOneOrMoreRoutes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "route_types",
+                        "in": "query",
+                        "description": "Filter by route_type; values returned via RouteTypes API"
+                    },
+                    {
+                        "name": "route_name",
+                        "in": "query",
+                        "description": "Filter by name  of route (accepts partial route name matches)"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/routes\/{route_id}": {
+            "get": {
+                "summary": "Get V3 Routes Route",
+                "description": "View route name and number for specific route id.",
+                "operationId": "RoutesRouteFromId",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "route_id",
+                        "in": "path",
+                        "description": "Identifier of route; values returned by Routes API - v3\/routes"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/runs\/route\/{route_id}": {
+            "get": {
+                "summary": "Get V3 Runs Route Route",
+                "description": "View all trip\/service runs for a specific route id.",
+                "operationId": "RunsForRoute",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "route_id",
+                        "in": "path",
+                        "description": "Identifier of route; values returned by Routes API - v3\/routes"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/runs\/route\/{route_id}\/route_type\/{route_type}": {
+            "get": {
+                "summary": "Get V3 Runs Route Route Route Type Route Type",
+                "description": "View all trip\/service runs for a specific route id and route type.",
+                "operationId": "RunsForRouteAndRouteType",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "route_id",
+                        "in": "path",
+                        "description": "Identifier of route; values returned by Routes API - v3\/routes"
+                    },
+                    {
+                        "name": "route_type",
+                        "in": "path",
+                        "description": "Number identifying transport mode; values returned via RouteTypes API"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/runs\/{run_id}": {
+            "get": {
+                "summary": "Get V3 Runs Run",
+                "description": "View all trip\/service runs for a specific run id.",
+                "operationId": "RunsForRun",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "run_id",
+                        "in": "path",
+                        "description": "Identifier of a trip\/service run; values returned by Runs API - \/v3\/route\/{route_id} and Departures API"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/runs\/{run_id}\/route_type\/{route_type}": {
+            "get": {
+                "summary": "Get V3 Runs Run Route Type Route Type",
+                "description": "View the trip\/service run for a specific run id and route type.",
+                "operationId": "RunsForRunAndRouteType",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "run_id",
+                        "in": "path",
+                        "description": "Identifier of a trip\/service run; values returned by Runs API - \/v3\/route\/{route_id} and Departures API"
+                    },
+                    {
+                        "name": "route_type",
+                        "in": "path",
+                        "description": "Number identifying transport mode; values returned via RouteTypes API"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/search\/{search_term}": {
+            "get": {
+                "summary": "Get V3 Search Search Term",
+                "description": "View stops, routes and myki ticket outlets that match the search term.",
+                "operationId": "SearchSearch",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "search_term",
+                        "in": "path",
+                        "description": "Search text (note: if search text is numeric and\/or less than 3 characters, the API will only return routes)"
+                    },
+                    {
+                        "name": "route_types",
+                        "in": "query",
+                        "description": "Filter by route_type; values returned via RouteTypes API"
+                    },
+                    {
+                        "name": "latitude",
+                        "in": "query",
+                        "description": "Filter by geographic coordinate of latitude"
+                    },
+                    {
+                        "name": "longitude",
+                        "in": "query",
+                        "description": "Filter by geographic coordinate of longitude"
+                    },
+                    {
+                        "name": "max_distance",
+                        "in": "query",
+                        "description": "Filter by maximum distance (in metres) from location specified via latitude and longitude parameters"
+                    },
+                    {
+                        "name": "include_addresses",
+                        "in": "query",
+                        "description": "Placeholder for future development; currently unavailable"
+                    },
+                    {
+                        "name": "include_outlets",
+                        "in": "query",
+                        "description": "Indicates if outlets will be returned in response (default = true)"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/stops\/location\/{latitude},{longitude}": {
+            "get": {
+                "summary": "Get V3 Stops Location Latitude , Longitude",
+                "description": "View all stops near a specific location.",
+                "operationId": "StopsStopsByGeolocation",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "latitude",
+                        "in": "path",
+                        "description": "Geographic coordinate of latitude"
+                    },
+                    {
+                        "name": "longitude",
+                        "in": "path",
+                        "description": "Geographic coordinate of longitude"
+                    },
+                    {
+                        "name": "route_types",
+                        "in": "query",
+                        "description": "Filter by route_type; values returned via RouteTypes API"
+                    },
+                    {
+                        "name": "max_results",
+                        "in": "query",
+                        "description": "Maximum number of results returned"
+                    },
+                    {
+                        "name": "max_distance",
+                        "in": "query",
+                        "description": "Filter by maximum distance (in metres) from location specified via latitude and longitude parameters"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/stops\/route\/{route_id}\/route_type\/{route_type}": {
+            "get": {
+                "summary": "Get V3 Stops Route Route Route Type Route Type",
+                "description": "View all stops on a specific route.",
+                "operationId": "StopsStopsForRoute",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "route_id",
+                        "in": "path",
+                        "description": "Identifier of route; values returned by Routes API - v3\/routes"
+                    },
+                    {
+                        "name": "route_type",
+                        "in": "path",
+                        "description": "Number identifying transport mode; values returned via RouteTypes API"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        },
+        "\/v3\/stops\/{stop_id}\/route_type\/{route_type}": {
+            "get": {
+                "summary": "Get V3 Stops Stop Route Type Route Type",
+                "description": "View facilities at a specific stop (metro and v\/line stations only).",
+                "operationId": "StopsStopDetails",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "stop_id",
+                        "in": "path",
+                        "description": "Identifier of stop; values returned by Stops API"
+                    },
+                    {
+                        "name": "route_type",
+                        "in": "path",
+                        "description": "Number identifying transport mode; values returned via RouteTypes API"
+                    },
+                    {
+                        "name": "stop_location",
+                        "in": "query",
+                        "description": "Indicates if stop location information will be returned (default = false)"
+                    },
+                    {
+                        "name": "stop_amenities",
+                        "in": "query",
+                        "description": "Indicates if stop amenity information will be returned (default = false)"
+                    },
+                    {
+                        "name": "stop_accessibility",
+                        "in": "query",
+                        "description": "Indicates if stop accessibility information will be returned (default = false)"
+                    },
+                    {
+                        "name": "stop_contact",
+                        "in": "query",
+                        "description": "Placeholder for future development; currently unavailable"
+                    },
+                    {
+                        "name": "stop_ticket",
+                        "in": "query",
+                        "description": "Placeholder for future development; currently unavailable"
+                    },
+                    {
+                        "name": "gtfs",
+                        "in": "query",
+                        "description": "Indicates that stop_id parameter will accept \"GTFS stop_id\" data"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Please ignore"
+                    },
+                    {
+                        "name": "devid",
+                        "in": "query",
+                        "description": "Your developer id"
+                    },
+                    {
+                        "name": "signature",
+                        "in": "query",
+                        "description": "Authentication signature for request"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "V2.Object": {
+                "type": "object"
+            },
+            "V3.Departure": {
+                "type": "object",
+                "properties": {
+                    "at_platform": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "direction_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "disruption_ids": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "estimated_departure_utc": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "flags": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "platform_number": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "run_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "scheduled_departure_utc": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.DeparturesBroadParameters": {
+                "type": "object",
+                "properties": {
+                    "date_utc": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "direction_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "expand": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "gtfs": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "include_cancelled": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "max_results": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "platform_numbers": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.DeparturesResponse": {
+                "type": "object",
+                "properties": {
+                    "departures": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "directions": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "disruptions": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "routes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "runs": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stops": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.DeparturesSpecificParameters": {
+                "type": "object",
+                "properties": {
+                    "date_utc": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "direction_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "expand": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "gtfs": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "include_cancelled": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "max_results": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.Direction": {
+                "type": "object",
+                "properties": {
+                    "direction_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "direction_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.DirectionsResponse": {
+                "type": "object",
+                "properties": {
+                    "directions": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.Disruption": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "disruption_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "disruption_status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "disruption_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "from_date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "last_updated": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "published_on": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "routes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "to_date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.DisruptionDirection": {
+                "type": "object",
+                "properties": {
+                    "direction_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "direction_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_direction_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "service_time": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.DisruptionResponse": {
+                "type": "object"
+            },
+            "V3.DisruptionRoute": {
+                "type": "object",
+                "properties": {
+                    "route_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_number": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.Disruptions": {
+                "type": "object",
+                "properties": {
+                    "general": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "metro_bus": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "metro_train": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "metro_tram": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regional_bus": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regional_coach": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regional_train": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.DisruptionsResponse": {
+                "type": "object"
+            },
+            "V3.ErrorResponse": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.ResultOutlet": {
+                "type": "object",
+                "properties": {
+                    "outlet_business": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "outlet_distance": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "outlet_latitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "outlet_longitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "outlet_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "outlet_suburb": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.ResultRoute": {
+                "type": "object",
+                "properties": {
+                    "route_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_number": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.ResultStop": {
+                "type": "object",
+                "properties": {
+                    "route_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_distance": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_latitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_longitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.Route": {
+                "type": "object",
+                "properties": {
+                    "route_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_number": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.RouteResponse": {
+                "type": "object"
+            },
+            "V3.RouteType": {
+                "type": "object",
+                "properties": {
+                    "route_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_type_name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.RouteTypesResponse": {
+                "type": "object",
+                "properties": {
+                    "route_types": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.Run": {
+                "type": "object",
+                "properties": {
+                    "destination_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "final_stop_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "run_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.RunResponse": {
+                "type": "object"
+            },
+            "V3.RunsResponse": {
+                "type": "object",
+                "properties": {
+                    "runs": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.SearchParameters": {
+                "type": "object",
+                "properties": {
+                    "include_addresses": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "include_outlets": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "latitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "longitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "max_distance": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "route_types": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.SearchResult": {
+                "type": "object",
+                "properties": {
+                    "outlets": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "routes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stops": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.Status": {
+                "type": "object",
+                "properties": {
+                    "health": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.StopAccessibility": {
+                "type": "object",
+                "properties": {
+                    "escalator": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "hearing_loop": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lifts": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lighting": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stairs": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tactile_tiles": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.StopAccessibilityWheelchair": {
+                "type": "object",
+                "properties": {
+                    "accessible_parking": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "accessible_phone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "accessible_ramp": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "accessible_toilet": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.StopAmenityDetails": {
+                "type": "object",
+                "properties": {
+                    "car_parking": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "cctv": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "taxi_rank": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "toilet": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.StopBase": {
+                "type": "object",
+                "properties": {
+                    "stop_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.StopDetails": {
+                "type": "object",
+                "properties": {
+                    "route_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "station_description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "station_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.StopGeosearch": {
+                "type": "object",
+                "properties": {
+                    "route_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_distance": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_latitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_longitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.StopGps": {
+                "type": "object",
+                "properties": {
+                    "latitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "longitude": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.StopLocation": {
+                "type": "object"
+            },
+            "V3.StopOnRoute": {
+                "type": "object",
+                "properties": {
+                    "route_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_latitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_longitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stop_name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.StopResponse": {
+                "type": "object"
+            },
+            "V3.StoppingPattern": {
+                "type": "object",
+                "properties": {
+                    "departures": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "disruptions": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.StopsByDistanceResponse": {
+                "type": "object",
+                "properties": {
+                    "stops": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V3.StopsOnRouteResponse": {
+                "type": "object",
+                "properties": {
+                    "stops": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
