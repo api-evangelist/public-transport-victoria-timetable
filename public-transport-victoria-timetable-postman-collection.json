@@ -1,0 +1,1347 @@
+{
+    "id": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+    "name": "Public Transport Victoria Timetable",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "e5c064e514dc45dda825e7188be64d29",
+            "name": "Get V3 Departures Route Type Route Type Stop Stop",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/departures\/route_type\/{route_type}\/stop\/{stop_id}",
+            "description": "View departures for all routes from a stop.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "route_type",
+                    "description": "Number identifying transport mode; values returned via RouteTypes API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "stop_id",
+                    "description": "Identifier of stop; values returned by Stops API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "platform_numbers",
+                    "description": "Filter by platform number at stop",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "direction_id",
+                    "description": "Filter by identifier of direction of travel; values returned by Directions API - \/v3\/directions\/route\/{route_id}",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date_utc",
+                    "description": "Filter by the date and time of the request (ISO 8601 UTC format)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "max_results",
+                    "description": "Maximum number of results returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "gtfs",
+                    "description": "Indicates that stop_id parameter will accept \"GTFS stop_id\" data",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "include_cancelled",
+                    "description": "Indicates if cancelled services (if they exist) are returned (default = false) - metropolitan train only",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "expand",
+                    "description": "List objects to be returned in full (i.e. expanded) - options include: all, stop, route, run, direction, disruption",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "3a8ff06fea91e38b93954e96fe92afbb",
+            "name": "Get V3 Departures Route Type Route Type Stop Stop Route Route",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/departures\/route_type\/{route_type}\/stop\/{stop_id}\/route\/{route_id}",
+            "description": "View departures for a specific route from a stop.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "route_type",
+                    "description": "Number identifying transport mode; values returned via RouteTypes API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "stop_id",
+                    "description": "Identifier of stop; values returned by Stops API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "route_id",
+                    "description": "Identifier of route; values returned by Routes API - v3\/routes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "direction_id",
+                    "description": "Filter by identifier of direction of travel; values returned by Directions API - \/v3\/directions\/route\/{route_id}",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date_utc",
+                    "description": "Filter by the date and time of the request (ISO 8601 UTC format)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "max_results",
+                    "description": "Maximum number of results returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "gtfs",
+                    "description": "Indicates that stop_id parameter will accept \"GTFS stop_id\" data",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "include_cancelled",
+                    "description": "Indicates if cancelled services (if they exist) are returned (default = false) - metropolitan train only",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "expand",
+                    "description": "List objects to be returned in full (i.e. expanded) - options include: all, stop, route, run, direction, disruption",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "296e64b6d98f2997b3a8394a866d454a",
+            "name": "Get V3 Directions Route Route",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/directions\/route\/{route_id}",
+            "description": "View directions that a route travels in.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "route_id",
+                    "description": "Identifier of route; values returned by Routes API - v3\/routes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "92221d270f19d7b22fd6dbe36d9fcade",
+            "name": "Get V3 Directions Direction",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/directions\/{direction_id}",
+            "description": "View all routes for a direction of travel.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "direction_id",
+                    "description": "Identifier of direction of travel; values returned by Directions API - \/v3\/directions\/route\/{route_id}",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "dbd667cb635d3fafd79899ed384b9c7c",
+            "name": "Get V3 Directions Direction Route Type Route Type",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/directions\/{direction_id}\/route_type\/{route_type}",
+            "description": "View all routes of a particular type for a direction of travel.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "direction_id",
+                    "description": "Identifier of direction of travel; values returned by Directions API - \/v3\/directions\/route\/{route_id}",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "route_type",
+                    "description": "Number identifying transport mode; values returned via RouteTypes API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "5d46682f7fc9c79821690557bccce8d2",
+            "name": "Get V3 Disruptions",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/disruptions",
+            "description": "View all disruptions for all route types.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "route_types",
+                    "description": "Filter by route_type; values returned via RouteTypes API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "disruption_status",
+                    "description": "Filter by status of disruption",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "fba143d3d1d6353ce1ff6c74f99f9371",
+            "name": "Get V3 Disruptions Route Route",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/disruptions\/route\/{route_id}",
+            "description": "View all disruptions for a particular route.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "route_id",
+                    "description": "Identifier of route; values returned by Routes API - v3\/routes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "disruption_status",
+                    "description": "Filter by status of disruption",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "92a4f18c292f3b64853cbf7160c53c0f",
+            "name": "Get V3 Disruptions Disruption",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/disruptions\/{disruption_id}",
+            "description": "View a specific disruption.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "disruption_id",
+                    "description": "Identifier of disruption; values returned by Disruptions API - \/v3\/disruptions OR \/v3\/disruptions\/route\/{route_id}",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "dd9bda1e617addbe8d37e167510b13d0",
+            "name": "Get V3 Pattern Run Run Route Type Route Type",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/pattern\/run\/{run_id}\/route_type\/{route_type}",
+            "description": "View the stopping pattern for a specific trip\/service run.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "run_id",
+                    "description": "Identifier of a trip\/service run; values returned by Runs API - \/v3\/route\/{route_id} and Departures API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "route_type",
+                    "description": "Number identifying transport mode; values returned via RouteTypes API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "stop_id",
+                    "description": "Filter by stop_id; values returned by Stops API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date_utc",
+                    "description": "Filter by the date and time of the request (ISO 8601 UTC format)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "fe94928e3b6295cb7847e9f7df6890c9",
+            "name": "Get V3 Route Types",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/route_types",
+            "description": "View all route types and their names.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "d7b4468fdb038349a59a32b248de33f5",
+            "name": "Get V3 Routes",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/routes",
+            "description": "View route names and numbers for all routes.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "route_types",
+                    "description": "Filter by route_type; values returned via RouteTypes API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "route_name",
+                    "description": "Filter by name  of route (accepts partial route name matches)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "67364fe9b86984e8ecf91c710daf5f15",
+            "name": "Get V3 Routes Route",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/routes\/{route_id}",
+            "description": "View route name and number for specific route id.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "route_id",
+                    "description": "Identifier of route; values returned by Routes API - v3\/routes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "84e5aae8f04822202dd4ef2c188a6f51",
+            "name": "Get V3 Runs Route Route",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/runs\/route\/{route_id}",
+            "description": "View all trip\/service runs for a specific route id.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "route_id",
+                    "description": "Identifier of route; values returned by Routes API - v3\/routes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "411eca199a9c6d3bcbdf930e3d7e3fc3",
+            "name": "Get V3 Runs Route Route Route Type Route Type",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/runs\/route\/{route_id}\/route_type\/{route_type}",
+            "description": "View all trip\/service runs for a specific route id and route type.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "route_id",
+                    "description": "Identifier of route; values returned by Routes API - v3\/routes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "route_type",
+                    "description": "Number identifying transport mode; values returned via RouteTypes API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "67a29308d6151a3fee58a36a14097022",
+            "name": "Get V3 Runs Run",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/runs\/{run_id}",
+            "description": "View all trip\/service runs for a specific run id.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "run_id",
+                    "description": "Identifier of a trip\/service run; values returned by Runs API - \/v3\/route\/{route_id} and Departures API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "028671e036c2cd2b0e299f0dd718b542",
+            "name": "Get V3 Runs Run Route Type Route Type",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/runs\/{run_id}\/route_type\/{route_type}",
+            "description": "View the trip\/service run for a specific run id and route type.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "run_id",
+                    "description": "Identifier of a trip\/service run; values returned by Runs API - \/v3\/route\/{route_id} and Departures API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "route_type",
+                    "description": "Number identifying transport mode; values returned via RouteTypes API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "f878fb1002458c2e263ba097e942f399",
+            "name": "Get V3 Search Search Term",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/search\/{search_term}",
+            "description": "View stops, routes and myki ticket outlets that match the search term.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "search_term",
+                    "description": "Search text (note: if search text is numeric and\/or less than 3 characters, the API will only return routes)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "route_types",
+                    "description": "Filter by route_type; values returned via RouteTypes API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "latitude",
+                    "description": "Filter by geographic coordinate of latitude",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "longitude",
+                    "description": "Filter by geographic coordinate of longitude",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "max_distance",
+                    "description": "Filter by maximum distance (in metres) from location specified via latitude and longitude parameters",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "include_addresses",
+                    "description": "Placeholder for future development; currently unavailable",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "include_outlets",
+                    "description": "Indicates if outlets will be returned in response (default = true)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "0a98c29fea59ab131393aeb6f7b54c02",
+            "name": "Get V3 Stops Location Latitude , Longitude",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/stops\/location\/{latitude},{longitude}",
+            "description": "View all stops near a specific location.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "latitude",
+                    "description": "Geographic coordinate of latitude",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "longitude",
+                    "description": "Geographic coordinate of longitude",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "route_types",
+                    "description": "Filter by route_type; values returned via RouteTypes API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "max_results",
+                    "description": "Maximum number of results returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "max_distance",
+                    "description": "Filter by maximum distance (in metres) from location specified via latitude and longitude parameters",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "c5a7c4db9cb5fecf73a5bf03b710ff12",
+            "name": "Get V3 Stops Route Route Route Type Route Type",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/stops\/route\/{route_id}\/route_type\/{route_type}",
+            "description": "View all stops on a specific route.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "route_id",
+                    "description": "Identifier of route; values returned by Routes API - v3\/routes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "route_type",
+                    "description": "Number identifying transport mode; values returned via RouteTypes API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        },
+        {
+            "id": "0521307823dbf48c412ad1c7923b2b9f",
+            "name": "Get V3 Stops Stop Route Type Route Type",
+            "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/stops\/{stop_id}\/route_type\/{route_type}",
+            "description": "View facilities at a specific stop (metro and v\/line stations only).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "stop_id",
+                    "description": "Identifier of stop; values returned by Stops API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "route_type",
+                    "description": "Number identifying transport mode; values returned via RouteTypes API",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "stop_location",
+                    "description": "Indicates if stop location information will be returned (default = false)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "stop_amenities",
+                    "description": "Indicates if stop amenity information will be returned (default = false)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "stop_accessibility",
+                    "description": "Indicates if stop accessibility information will be returned (default = false)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "stop_contact",
+                    "description": "Placeholder for future development; currently unavailable",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "stop_ticket",
+                    "description": "Placeholder for future development; currently unavailable",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "gtfs",
+                    "description": "Indicates that stop_id parameter will accept \"GTFS stop_id\" data",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "Please ignore",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "devid",
+                    "description": "Your developer id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "signature",
+                    "description": "Authentication signature for request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "rawModeData": ""
+        }
+    ]
+}
