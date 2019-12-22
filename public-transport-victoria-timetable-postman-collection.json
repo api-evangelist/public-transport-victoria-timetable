@@ -1,5 +1,5 @@
 {
-    "id": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+    "id": "c2364e2ff92292236785d1f2c497d55c",
     "name": "Public Transport Victoria Timetable",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "e5c064e514dc45dda825e7188be64d29",
+            "id": "7e0bfe26834f8cf452283549e0e03424",
             "name": "Get V3 Departures Route Type Route Type Stop Stop",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/departures\/route_type\/{route_type}\/stop\/{stop_id}",
             "description": "View departures for all routes from a stop.",
@@ -114,11 +114,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "3a8ff06fea91e38b93954e96fe92afbb",
+            "id": "0a01dab54c2211b524535ac43316a499",
             "name": "Get V3 Departures Route Type Route Type Stop Stop Route Route",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/departures\/route_type\/{route_type}\/stop\/{stop_id}\/route\/{route_id}",
             "description": "View departures for a specific route from a stop.",
@@ -222,11 +222,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "296e64b6d98f2997b3a8394a866d454a",
+            "id": "5c5d2356106a183d471cf76fcbec5895",
             "name": "Get V3 Directions Route Route",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/directions\/route\/{route_id}",
             "description": "View directions that a route travels in.",
@@ -274,11 +274,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "92221d270f19d7b22fd6dbe36d9fcade",
+            "id": "1d00691d15dec022cdc012eab161dfa5",
             "name": "Get V3 Directions Direction",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/directions\/{direction_id}",
             "description": "View all routes for a direction of travel.",
@@ -326,11 +326,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "dbd667cb635d3fafd79899ed384b9c7c",
+            "id": "e9c5e11e9f580bd092fea994e60d57ec",
             "name": "Get V3 Directions Direction Route Type Route Type",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/directions\/{direction_id}\/route_type\/{route_type}",
             "description": "View all routes of a particular type for a direction of travel.",
@@ -385,11 +385,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "5d46682f7fc9c79821690557bccce8d2",
+            "id": "9bc6eab05ba583afa1a490692be5f18a",
             "name": "Get V3 Disruptions",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/disruptions",
             "description": "View all disruptions for all route types.",
@@ -444,11 +444,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "fba143d3d1d6353ce1ff6c74f99f9371",
+            "id": "64a79f73dc1f1386fb9450c0d78c0c3f",
             "name": "Get V3 Disruptions Route Route",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/disruptions\/route\/{route_id}",
             "description": "View all disruptions for a particular route.",
@@ -503,11 +503,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "92a4f18c292f3b64853cbf7160c53c0f",
+            "id": "16d4eeead92cc626a304b43a5455e88e",
             "name": "Get V3 Disruptions Disruption",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/disruptions\/{disruption_id}",
             "description": "View a specific disruption.",
@@ -555,11 +555,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "dd9bda1e617addbe8d37e167510b13d0",
+            "id": "f072af0ea66d581b4bac0c8719c04326",
             "name": "Get V3 Pattern Run Run Route Type Route Type",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/pattern\/run\/{run_id}\/route_type\/{route_type}",
             "description": "View the stopping pattern for a specific trip\/service run.",
@@ -628,11 +628,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "fe94928e3b6295cb7847e9f7df6890c9",
+            "id": "198ab4ad1fd447ac46ff243d5b8afaae",
             "name": "Get V3 Route Types",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/route_types",
             "description": "View all route types and their names.",
@@ -673,11 +673,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "d7b4468fdb038349a59a32b248de33f5",
+            "id": "bf1e10ba4be549accfaa19380e3dc938",
             "name": "Get V3 Routes",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/routes",
             "description": "View route names and numbers for all routes.",
@@ -732,11 +732,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "67364fe9b86984e8ecf91c710daf5f15",
+            "id": "5e76dc484870851143aa4daa6eb16e92",
             "name": "Get V3 Routes Route",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/routes\/{route_id}",
             "description": "View route name and number for specific route id.",
@@ -784,11 +784,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "84e5aae8f04822202dd4ef2c188a6f51",
+            "id": "989dde1a09fe1e67bfcfa48dd74b1c40",
             "name": "Get V3 Runs Route Route",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/runs\/route\/{route_id}",
             "description": "View all trip\/service runs for a specific route id.",
@@ -836,11 +836,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "411eca199a9c6d3bcbdf930e3d7e3fc3",
+            "id": "fb3cb1113a0692ddab26f4636f3d5007",
             "name": "Get V3 Runs Route Route Route Type Route Type",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/runs\/route\/{route_id}\/route_type\/{route_type}",
             "description": "View all trip\/service runs for a specific route id and route type.",
@@ -895,11 +895,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "67a29308d6151a3fee58a36a14097022",
+            "id": "5acb8e0b13420d71f0cb663b4cc983c0",
             "name": "Get V3 Runs Run",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/runs\/{run_id}",
             "description": "View all trip\/service runs for a specific run id.",
@@ -947,11 +947,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "028671e036c2cd2b0e299f0dd718b542",
+            "id": "5de28d3833a1d42307ed1012e6524fa8",
             "name": "Get V3 Runs Run Route Type Route Type",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/runs\/{run_id}\/route_type\/{route_type}",
             "description": "View the trip\/service run for a specific run id and route type.",
@@ -1006,11 +1006,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "f878fb1002458c2e263ba097e942f399",
+            "id": "09ca413bb92f8017e17f9bf0cda6b3a3",
             "name": "Get V3 Search Search Term",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/search\/{search_term}",
             "description": "View stops, routes and myki ticket outlets that match the search term.",
@@ -1100,11 +1100,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "0a98c29fea59ab131393aeb6f7b54c02",
+            "id": "d1d0a85e5eede0064e08311f87691235",
             "name": "Get V3 Stops Location Latitude , Longitude",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/stops\/location\/{latitude},{longitude}",
             "description": "View all stops near a specific location.",
@@ -1180,11 +1180,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "c5a7c4db9cb5fecf73a5bf03b710ff12",
+            "id": "4ba5fb9d7bafaa655d1ca229b2d707a4",
             "name": "Get V3 Stops Route Route Route Type Route Type",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/stops\/route\/{route_id}\/route_type\/{route_type}",
             "description": "View all stops on a specific route.",
@@ -1239,11 +1239,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         },
         {
-            "id": "0521307823dbf48c412ad1c7923b2b9f",
+            "id": "99bd4635edafedc448941db95920ef03",
             "name": "Get V3 Stops Stop Route Type Route Type",
             "url": "httpstimetableapi.ptv.vic.gov.au\/\/v3\/stops\/{stop_id}\/route_type\/{route_type}",
             "description": "View facilities at a specific stop (metro and v\/line stations only).",
@@ -1340,7 +1340,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c4d6e39ec40e4614b4a8b0ba78c4ad1e",
+            "collectionId": "c2364e2ff92292236785d1f2c497d55c",
             "rawModeData": ""
         }
     ]
